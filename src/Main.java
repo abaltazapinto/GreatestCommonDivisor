@@ -7,6 +7,7 @@ public class Main {
         System.out.println(getGreatestCommonDivisor(12, 30));
         System.out.println(getGreatestCommonDivisor(9, 18));
         System.out.println(getGreatestCommonDivisor(81, 153));
+        System.out.println(getGreatestCommonDivisor(1010, 10));
     }
     public static int getGreatestCommonDivisor(int first, int second) {
         if (first < 10 || second < 10) {
@@ -18,7 +19,7 @@ public class Main {
         // checking the smaller of two numbers
         int min = Math.min(first, second);
 
-        for (int j = 1; j < min; j++) {
+        for (int j = 1; j <= min; j++) {
             if (first % j == 0 && second % j == 0) {
                 gcd = j;
             }
